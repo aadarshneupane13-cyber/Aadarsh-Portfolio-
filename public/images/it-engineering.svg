@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
+  <rect width="512" height="512" rx="64" fill="#0d1424"/>
+  <rect x="16" y="16" width="480" height="480" rx="52" stroke="#10b981" stroke-width="4" stroke-opacity="0.3" stroke-dasharray="12 12"/>
+  
+  {/* Ambient glowing core */}
+  <circle cx="256" cy="256" r="140" fill="#10b981" fill-opacity="0.08" filter="blur(20px)"/>
+  
+  {/* Circuit lines */}
+  <path d="M120 180H190L230 220H320" stroke="#38bdf8" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="120" cy="180" r="6" fill="#38bdf8"/>
+  <circle cx="320" cy="220" r="6" fill="#38bdf8"/>
+
+  <path d="M392 332H322L282 292H192" stroke="#10b981" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="392" cy="332" r="6" fill="#10b981"/>
+  <circle cx="192" cy="292" r="6" fill="#10b981"/>
+
+  {/* IT Engineering Laptop & Graduation Cap */}
+  <g transform="translate(156, 166)">
+    {/* Screen */}
+    <rect x="20" y="20" width="160" height="110" rx="10" fill="#131c31" stroke="#e2e8f0" stroke-width="6"/>
+    {/* Screen Display */}
+    <rect x="32" y="32" width="136" height="86" rx="6" fill="#070a12"/>
+    <text x="50" y="75" fill="#10b981" font-family="monospace" font-size="24" font-weight="bold">&lt;BE.IT/&gt;</text>
+    <path d="M50 92H110" stroke="#38bdf8" stroke-width="3" stroke-linecap="round"/>
+    
+    {/* Base */}
+    <path d="M0 135C0 132 2 130 5 130H195C198 130 200 132 200 135L208 148C208 150 206 152 203 152H-3C-6 152 -8 150 -8 148L0 135Z" fill="#334155" stroke="#94a3b8" stroke-width="4"/>
+    {/* Trackpad */}
+    <rect x="85" y="136" width="30" height="8" rx="2" fill="#64748b"/>
+  </g>
+
+  {/* Graduation Cap Motif on top right */}
+  <g transform="translate(290, 110) scale(0.85)">
+    <path d="M60 20L110 45L60 70L10 45L60 20Z" fill="#10b981" stroke="#34d399" stroke-width="4" stroke-linejoin="round"/>
+    <path d="M30 56V80C30 92 43 100 60 100C77 100 90 92 90 80V56" fill="none" stroke="#10b981" stroke-width="4" stroke-linecap="round"/>
+    <path d="M102 48V78" stroke="#f59e0b" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="102" cy="82" r="5" fill="#f59e0b"/>
+  </g>
+</svg>
