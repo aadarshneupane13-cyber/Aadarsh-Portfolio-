@@ -130,7 +130,7 @@ export const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete }) => {
               </div>
 
               <div className="flex justify-between w-full font-mono text-[10px] text-zinc-500 tracking-widest uppercase">
-                <span>PORTFOLIO 2026</span>
+                <span>LET'S GO</span>
                 <span>{progress}%</span>
               </div>
             </motion.div>
