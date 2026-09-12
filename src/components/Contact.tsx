@@ -3,16 +3,26 @@ import { motion } from 'framer-motion';
 import { Mail, ArrowUpRight, Copy, Check, MessageSquare } from 'lucide-react';
 
 export const Contact: React.FC = () => {
-  const [copied, setCopied] = useState(false);
+  const [copiedEmail, setCopiedEmail] = useState(false);
+  const [copiedLinkedin, setCopiedLinkedin] = useState(false);
   const email = 'aadarshneupane13@gmail.com';
-  const linkedinUrl = 'https://www.linkedin.com/in/aadarsh-neupane-657705418/';
+  const linkedinDisplay = 'www.linkedin.com/in/aadarsh-neupane-657705418';
+  const linkedinUrl = 'https://www.linkedin.com/in/aadarsh-neupane-657705418';
 
-  const copyToClipboard = (e: React.MouseEvent) => {
+  const copyEmailToClipboard = (e: React.MouseEvent) => {
     e.preventDefault();
     e.stopPropagation();
     navigator.clipboard.writeText(email);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+    setCopiedEmail(true);
+    setTimeout(() => setCopiedEmail(false), 2000);
+  };
+
+  const copyLinkedinToClipboard = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    navigator.clipboard.writeText(linkedinDisplay);
+    setCopiedLinkedin(true);
+    setTimeout(() => setCopiedLinkedin(false), 2000);
   };
 
   return (
@@ -87,11 +97,11 @@ export const Contact: React.FC = () => {
                 <ArrowUpRight className="w-3.5 h-3.5" />
               </a>
               <button
-                onClick={copyToClipboard}
+                onClick={copyEmailToClipboard}
                 title="Copy email to clipboard"
                 className="inline-flex items-center gap-1.5 text-xs font-medium px-3 py-1.5 rounded-lg bg-zinc-200/80 dark:bg-white/5 hover:bg-zinc-300 dark:hover:bg-white/10 text-zinc-800 dark:text-zinc-200 border border-zinc-300 dark:border-white/10 transition-colors"
               >
-                {copied ? (
+                {copiedEmail ? (
                   <>
                     <Check className="w-3.5 h-3.5 text-zinc-900 dark:text-white" />
                     <span>Copied!</span>
@@ -122,28 +132,45 @@ export const Contact: React.FC = () => {
                 </svg>
               </div>
               <span className="font-mono text-xs uppercase tracking-widest text-zinc-500 dark:text-zinc-400 font-semibold block mb-1">
-                LinkedIn Network
+                LinkedIn Profile
               </span>
               <a 
                 href={linkedinUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-semibold text-base sm:text-lg text-zinc-900 dark:text-white hover:underline block mb-4"
+                className="font-semibold text-sm sm:text-base text-zinc-900 dark:text-white hover:underline break-all block mb-4"
               >
-                Aadarsh Neupane
+                {linkedinDisplay}
               </a>
             </div>
 
-            <div className="pt-3 border-t border-zinc-200 dark:border-white/10">
+            <div className="flex items-center gap-3 pt-3 border-t border-zinc-200 dark:border-white/10">
               <a 
                 href={linkedinUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 text-xs font-semibold px-4 py-1.5 rounded-lg bg-zinc-900 dark:bg-white text-white dark:text-black hover:bg-zinc-800 dark:hover:bg-zinc-200 transition-colors shadow-sm"
+                className="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-lg bg-zinc-900 dark:bg-white text-white dark:text-black hover:bg-zinc-800 dark:hover:bg-zinc-200 transition-colors shadow-sm"
               >
-                <span>Connect on LinkedIn</span>
+                <span>Open Link</span>
                 <ArrowUpRight className="w-3.5 h-3.5" />
               </a>
+              <button
+                onClick={copyLinkedinToClipboard}
+                title="Copy LinkedIn URL to clipboard"
+                className="inline-flex items-center gap-1.5 text-xs font-medium px-3 py-1.5 rounded-lg bg-zinc-200/80 dark:bg-white/5 hover:bg-zinc-300 dark:hover:bg-white/10 text-zinc-800 dark:text-zinc-200 border border-zinc-300 dark:border-white/10 transition-colors"
+              >
+                {copiedLinkedin ? (
+                  <>
+                    <Check className="w-3.5 h-3.5 text-zinc-900 dark:text-white" />
+                    <span>Copied!</span>
+                  </>
+                ) : (
+                  <>
+                    <Copy className="w-3.5 h-3.5" />
+                    <span>Copy</span>
+                  </>
+                )}
+              </button>
             </div>
           </motion.div>
         </div>

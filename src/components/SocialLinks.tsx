@@ -57,7 +57,7 @@ export const SocialLinks: React.FC = () => {
 
         {/* LinkedIn Link */}
         <a
-          href="https://www.linkedin.com/in/aadarsh-neupane-657705418/"
+          href="https://www.linkedin.com/in/aadarsh-neupane-657705418"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="LinkedIn Profile"

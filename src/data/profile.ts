@@ -17,7 +17,7 @@ export const profileData: ProfileData = {
   ],
   email: "aadarshneupane13@gmail.com",
   instagram: "aad_rsh11",
-  linkedin: "https://www.linkedin.com/in/aadarsh-neupane-657705418/",
+  linkedin: "https://www.linkedin.com/in/aadarsh-neupane-657705418",
   profileImage: "/images/aadarsh-profile.jpg",
   logoImage: "/images/aadarsh-logo.png",
   fallbackInitials: "AN"
