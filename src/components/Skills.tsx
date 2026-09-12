@@ -53,7 +53,7 @@ export const Skills: React.FC = () => {
   return (
     <section 
       id="skills" 
-      className="skills py-24 px-4 sm:px-6 relative border-t border-zinc-200 dark:border-white/5 bg-zinc-50 dark:bg-[#080b11] transition-colors duration-300"
+      className="skills py-16 sm:py-24 px-4 sm:px-6 relative border-t border-zinc-200 dark:border-white/5 bg-zinc-50 dark:bg-[#080b11] transition-colors duration-300"
     >
       {/* Scroll-revealed radiant light seam at section entry */}
       <motion.div 
@@ -71,23 +71,23 @@ export const Skills: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false, amount: 0.2 }}
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-          className="text-center mb-16"
+          className="text-center mb-10 sm:mb-16"
         >
           <div className="inline-flex items-center justify-center p-3 rounded-2xl bg-zinc-100 dark:bg-white/5 border border-zinc-300 dark:border-white/10 mb-4 text-zinc-900 dark:text-white shadow-sm">
-            <Wrench className="w-8 h-8" />
+            <Wrench className="w-7 h-7 sm:w-8 sm:h-8" />
           </div>
-          <h2 className="poppins-bold text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-zinc-900 dark:text-white mb-4">
+          <h2 className="poppins-bold text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-zinc-900 dark:text-white mb-3 sm:mb-4">
             SKILLS
           </h2>
-          <p className="poppins-regular text-zinc-600 dark:text-slate-300 text-base sm:text-lg max-w-2xl mx-auto">
+          <p className="poppins-regular text-zinc-600 dark:text-slate-300 text-sm sm:text-base md:text-lg max-w-2xl mx-auto px-2">
             Technical competencies, engineering practices, leadership, and creative capabilities:
           </p>
         </motion.div>
 
         {/* Skills Grid: matching the reference layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 sm:gap-12 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 max-w-5xl mx-auto">
           {/* Column 1: Languages, Frameworks, Practice */}
-          <div className="space-y-10">
+          <div className="space-y-7 sm:space-y-10">
             {column1.map((group, groupIndex) => (
               <motion.div
                 key={group.title}
@@ -96,16 +96,16 @@ export const Skills: React.FC = () => {
                 viewport={{ once: false, amount: 0.15 }}
                 transition={{ duration: 0.55, delay: groupIndex * 0.1, ease: [0.22, 1, 0.36, 1] }}
               >
-                <h3 className="font-mono text-xs uppercase tracking-[0.22em] text-zinc-500 dark:text-zinc-400 font-semibold mb-3.5">
+                <h3 className="font-mono text-xs uppercase tracking-[0.22em] text-zinc-500 dark:text-zinc-400 font-semibold mb-3">
                   {group.title}
                 </h3>
-                <div className="flex flex-wrap gap-2.5">
+                <div className="flex flex-wrap gap-2 sm:gap-2.5">
                   {group.skills.map((skill) => (
                     <motion.span
                       key={skill}
                       whileHover={{ y: -2 }}
                       transition={{ duration: 0.2 }}
-                      className="px-3.5 py-2 rounded-lg text-xs sm:text-sm font-medium tracking-wide bg-white dark:bg-[#0c0f16] text-zinc-800 dark:text-zinc-200 border border-zinc-200/90 dark:border-zinc-800/90 hover:border-zinc-400 dark:hover:border-zinc-600 hover:bg-zinc-50 dark:hover:bg-[#131722] shadow-sm transition-colors select-none"
+                      className="px-3 py-1.5 sm:px-3.5 sm:py-2 rounded-lg text-xs sm:text-sm font-medium tracking-wide bg-white dark:bg-[#0c0f16] text-zinc-800 dark:text-zinc-200 border border-zinc-200/90 dark:border-zinc-800/90 hover:border-zinc-400 dark:hover:border-zinc-600 hover:bg-zinc-50 dark:hover:bg-[#131722] shadow-sm transition-colors select-none touch-manipulation"
                     >
                       {skill}
                     </motion.span>
@@ -116,7 +116,7 @@ export const Skills: React.FC = () => {
           </div>
 
           {/* Column 2: Leadership & Strategy, Creative & Marketing */}
-          <div className="space-y-10">
+          <div className="space-y-7 sm:space-y-10">
             {column2.map((group, groupIndex) => (
               <motion.div
                 key={group.title}
@@ -125,16 +125,16 @@ export const Skills: React.FC = () => {
                 viewport={{ once: false, amount: 0.15 }}
                 transition={{ duration: 0.55, delay: groupIndex * 0.15, ease: [0.22, 1, 0.36, 1] }}
               >
-                <h3 className="font-mono text-xs uppercase tracking-[0.22em] text-zinc-500 dark:text-zinc-400 font-semibold mb-3.5">
+                <h3 className="font-mono text-xs uppercase tracking-[0.22em] text-zinc-500 dark:text-zinc-400 font-semibold mb-3">
                   {group.title}
                 </h3>
-                <div className="flex flex-wrap gap-2.5">
+                <div className="flex flex-wrap gap-2 sm:gap-2.5">
                   {group.skills.map((skill) => (
                     <motion.span
                       key={skill}
                       whileHover={{ y: -2 }}
                       transition={{ duration: 0.2 }}
-                      className="px-3.5 py-2 rounded-lg text-xs sm:text-sm font-medium tracking-wide bg-white dark:bg-[#0c0f16] text-zinc-800 dark:text-zinc-200 border border-zinc-200/90 dark:border-zinc-800/90 hover:border-zinc-400 dark:hover:border-zinc-600 hover:bg-zinc-50 dark:hover:bg-[#131722] shadow-sm transition-colors select-none"
+                      className="px-3 py-1.5 sm:px-3.5 sm:py-2 rounded-lg text-xs sm:text-sm font-medium tracking-wide bg-white dark:bg-[#0c0f16] text-zinc-800 dark:text-zinc-200 border border-zinc-200/90 dark:border-zinc-800/90 hover:border-zinc-400 dark:hover:border-zinc-600 hover:bg-zinc-50 dark:hover:bg-[#131722] shadow-sm transition-colors select-none touch-manipulation"
                     >
                       {skill}
                     </motion.span>

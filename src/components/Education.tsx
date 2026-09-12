@@ -70,7 +70,7 @@ export const Education: React.FC = () => {
   return (
     <section 
       id="academics" 
-      className="education py-24 px-4 sm:px-6 relative border-t border-zinc-200 dark:border-white/5 bg-zinc-100 dark:bg-[#07090e] transition-colors duration-300"
+      className="education py-16 sm:py-24 px-4 sm:px-6 relative border-t border-zinc-200 dark:border-white/5 bg-zinc-100 dark:bg-[#07090e] transition-colors duration-300"
     >
       {/* Scroll-revealed radiant light seam at section entry */}
       <motion.div 
@@ -88,21 +88,21 @@ export const Education: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false, amount: 0.2 }}
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-          className="text-center mb-16"
+          className="text-center mb-10 sm:mb-16"
         >
           <div className="inline-flex items-center justify-center p-3 rounded-2xl bg-zinc-200/80 dark:bg-white/5 border border-zinc-300 dark:border-white/10 mb-4 text-zinc-900 dark:text-white shadow-sm">
-            <GraduationCap className="w-8 h-8" />
+            <GraduationCap className="w-7 h-7 sm:w-8 sm:h-8" />
           </div>
-          <h2 className="poppins-bold text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-zinc-900 dark:text-white mb-4">
+          <h2 className="poppins-bold text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-zinc-900 dark:text-white mb-3 sm:mb-4">
             ACADEMICS
           </h2>
-          <p className="poppins-regular text-zinc-600 dark:text-slate-300 text-base sm:text-lg max-w-2xl mx-auto">
+          <p className="poppins-regular text-zinc-600 dark:text-slate-300 text-sm sm:text-base md:text-lg max-w-2xl mx-auto px-2">
             Academic milestones and educational qualifications:
           </p>
         </motion.div>
 
         {/* Education Cards Grid with staggered scroll reveal */}
-        <div className="education-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="education-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto">
           {educationItems.map((item, index) => (
             <motion.div
               key={item.id}
@@ -111,10 +111,10 @@ export const Education: React.FC = () => {
               viewport={{ once: false, amount: 0.15 }}
               transition={{ duration: 0.65, delay: index * 0.15, ease: [0.22, 1, 0.36, 1] }}
               whileHover={{ y: -6, transition: { duration: 0.25 } }}
-              className="education-card glass-card rounded-2xl overflow-hidden flex flex-col p-6 group hover:border-zinc-400 dark:hover:border-white/20"
+              className="education-card glass-card rounded-2xl overflow-hidden flex flex-col p-5 sm:p-7 group hover:border-zinc-400 dark:hover:border-white/20"
             >
               {/* Card Image Container */}
-              <div className="w-full h-48 rounded-xl overflow-hidden mb-6 bg-zinc-200/50 dark:bg-[#0c101a] flex items-center justify-center p-3 relative border border-zinc-300 dark:border-white/5 group-hover:border-zinc-400 dark:group-hover:border-white/15 transition-all">
+              <div className="w-full h-40 sm:h-48 rounded-xl overflow-hidden mb-5 sm:mb-6 bg-zinc-200/50 dark:bg-[#0c101a] flex items-center justify-center p-3 relative border border-zinc-300 dark:border-white/5 group-hover:border-zinc-400 dark:group-hover:border-white/15 transition-all">
                 <img
                   src={item.image}
                   alt={item.imageAlt}
@@ -129,7 +129,7 @@ export const Education: React.FC = () => {
               {/* Card Content */}
               <div className="flex-1 flex flex-col justify-between">
                 <div>
-                  <h3 className="poppins-semibold text-xl font-semibold text-zinc-900 dark:text-white transition-colors mb-3">
+                  <h3 className="poppins-semibold text-lg sm:text-xl font-semibold text-zinc-900 dark:text-white transition-colors mb-2.5 sm:mb-3">
                     {item.title}
                   </h3>
                   <p className="poppins-regular text-zinc-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed">

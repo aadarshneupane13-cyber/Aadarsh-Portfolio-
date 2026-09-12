@@ -58,18 +58,19 @@ export const Hero: React.FC = () => {
         
         {/* ================= LAYER 1: AADARSH'S PHOTO (Centered with exact ratio) ================= */}
         <div 
-          className="relative z-10 w-full h-full flex items-center justify-center px-4 will-change-transform"
+          className="relative z-10 w-full h-full flex items-center justify-center px-3 sm:px-4 will-change-transform"
           style={{
             transform: `scale(${imageScale})`,
             transformOrigin: 'center center',
           }}
         >
           {/* Portrait Container - matching the exact ratio of Aadarsh's portrait */}
-          <div className="relative w-full max-w-[480px] sm:max-w-[560px] md:max-w-[620px] h-[80vh] sm:h-[85vh] max-h-[860px] rounded-xl sm:rounded-2xl overflow-hidden shadow-2xl border border-zinc-200 dark:border-white/10 bg-zinc-200 dark:bg-[#0e131d]">
+          <div className="relative w-[90vw] max-w-[420px] sm:max-w-[560px] md:max-w-[620px] h-[72vh] sm:h-[82vh] md:h-[85vh] max-h-[860px] rounded-xl sm:rounded-2xl overflow-hidden shadow-2xl border border-zinc-200 dark:border-white/10 bg-zinc-200 dark:bg-[#0e131d]">
             <img 
               src="/images/aadarsh-profile.jpg" 
               alt="Aadarsh Neupane" 
               className="w-full h-full object-cover object-center"
+              loading="eager"
             />
             {/* Subtle edge vignette so the photo melts into the panels */}
             <div className="absolute inset-0 pointer-events-none bg-gradient-to-t from-zinc-900/30 dark:from-[#0A0C0E]/40 via-transparent to-zinc-900/20 dark:to-[#0A0C0E]/30" />
@@ -94,9 +95,9 @@ export const Hero: React.FC = () => {
         />
 
         {/* ================= LAYER 3: THE PARTING WORDMARK ON TOP ================= */}
-        <div className="absolute inset-0 z-30 flex items-center justify-center pointer-events-none px-4 sm:px-8 overflow-hidden">
+        <div className="absolute inset-0 z-30 flex items-center justify-center pointer-events-none px-2 sm:px-8 overflow-hidden">
           <h1 
-            className="font-syne font-extrabold text-[clamp(15px,5.1vw,82px)] text-zinc-900 dark:text-[#EDE7DC] leading-none tracking-[-0.01em] whitespace-nowrap flex items-center justify-center will-change-transform max-w-full"
+            className="font-syne font-extrabold text-[clamp(14px,5.0vw,82px)] text-zinc-900 dark:text-[#EDE7DC] leading-none tracking-[-0.01em] whitespace-nowrap flex items-center justify-center will-change-transform max-w-full"
             style={{
               transform: `scale(${titleScale})`,
               letterSpacing: `${letterSpacingEm}em`,
@@ -104,7 +105,7 @@ export const Hero: React.FC = () => {
           >
             {/* Left Word: AADARSH */}
             <span 
-              className="inline-block will-change-transform pr-1.5 sm:pr-3"
+              className="inline-block will-change-transform pr-1 sm:pr-3"
               style={{
                 transform: `translate3d(${leftWordTranslate}%, 0, 0)`,
               }}
@@ -114,7 +115,7 @@ export const Hero: React.FC = () => {
 
             {/* Right Word: NEUPANE */}
             <span 
-              className="inline-block will-change-transform pl-1.5 sm:pl-3"
+              className="inline-block will-change-transform pl-1 sm:pl-3"
               style={{
                 transform: `translate3d(${rightWordTranslate}%, 0, 0)`,
               }}
@@ -126,38 +127,38 @@ export const Hero: React.FC = () => {
 
         {/* ================= LAYER 4: PINNED CORNER METADATA ================= */}
         {/* Top-Left */}
-        <div className="absolute top-20 left-6 sm:left-10 z-30 pointer-events-none">
-          <span className="font-sora text-[10px] uppercase tracking-[0.15em] text-zinc-700 dark:text-slate-300 block font-semibold">
+        <div className="absolute top-16 sm:top-20 left-3.5 sm:left-10 z-30 pointer-events-none">
+          <span className="font-sora text-[8.5px] sm:text-[10px] uppercase tracking-[0.14em] sm:tracking-[0.15em] text-zinc-700 dark:text-slate-300 block font-semibold">
             BE IT ENGINEER
           </span>
-          <span className="font-sora text-[9px] uppercase tracking-[0.14em] text-zinc-500 dark:text-slate-500">
+          <span className="font-sora text-[7.5px] sm:text-[9px] uppercase tracking-[0.12em] sm:tracking-[0.14em] text-zinc-500 dark:text-slate-500">
             NEPAL 🇳🇵
           </span>
         </div>
 
         {/* Top-Right */}
-        <div className="absolute top-20 right-6 sm:right-10 z-30 text-right pointer-events-none">
-          <span className="font-sora text-[10px] uppercase tracking-[0.15em] text-zinc-700 dark:text-slate-300 block font-semibold">
+        <div className="absolute top-16 sm:top-20 right-3.5 sm:right-10 z-30 text-right pointer-events-none">
+          <span className="font-sora text-[8.5px] sm:text-[10px] uppercase tracking-[0.14em] sm:tracking-[0.15em] text-zinc-700 dark:text-slate-300 block font-semibold">
             EXPLORER WHO LOVES TRAVELING
           </span>
-          <span className="font-sora text-[9px] uppercase tracking-[0.14em] text-zinc-500 dark:text-slate-500">
+          <span className="font-sora text-[7.5px] sm:text-[9px] uppercase tracking-[0.12em] sm:tracking-[0.14em] text-zinc-500 dark:text-slate-500">
             EXPLORING THE WORLD
           </span>
         </div>
 
         {/* Bottom-Left */}
-        <div className="absolute bottom-8 left-6 sm:left-10 z-30 pointer-events-none flex items-center gap-2">
-          <span className="font-sora text-[10px] uppercase tracking-[0.15em] text-zinc-600 dark:text-slate-400 font-medium">
+        <div className="absolute bottom-5 sm:bottom-8 left-3.5 sm:left-10 z-30 pointer-events-none flex items-center gap-2">
+          <span className="font-sora text-[8.5px] sm:text-[10px] uppercase tracking-[0.14em] sm:tracking-[0.15em] text-zinc-600 dark:text-slate-400 font-medium">
             {progress < 0.95 ? 'SCROLL TO OPEN ↓' : 'PORTAL UNCOVERED'}
           </span>
         </div>
 
         {/* Bottom-Right */}
-        <div className="absolute bottom-8 right-6 sm:right-10 z-30 text-right pointer-events-none">
-          <span className="font-sora text-[10px] uppercase tracking-[0.15em] text-zinc-700 dark:text-slate-300 block font-semibold">
+        <div className="absolute bottom-5 sm:bottom-8 right-3.5 sm:right-10 z-30 text-right pointer-events-none">
+          <span className="font-sora text-[8.5px] sm:text-[10px] uppercase tracking-[0.14em] sm:tracking-[0.15em] text-zinc-700 dark:text-slate-300 block font-semibold">
             LEARNING FOR MINE BETTER DEVELOPMENT
           </span>
-          <span className="font-sora text-[9px] uppercase tracking-[0.14em] text-zinc-900 dark:text-zinc-300 font-medium">
+          <span className="font-sora text-[7.5px] sm:text-[9px] uppercase tracking-[0.12em] sm:tracking-[0.14em] text-zinc-900 dark:text-zinc-300 font-medium">
             EXPLORER & CREATOR
           </span>
         </div>

@@ -59,7 +59,7 @@ export const Projects: React.FC = () => {
   return (
     <section 
       id="projects" 
-      className="projects py-24 px-4 sm:px-6 relative min-h-screen border-t border-zinc-200 dark:border-white/5 bg-zinc-50 dark:bg-[#080b11] transition-colors duration-300"
+      className="projects py-16 sm:py-24 px-4 sm:px-6 relative min-h-screen border-t border-zinc-200 dark:border-white/5 bg-zinc-50 dark:bg-[#080b11] transition-colors duration-300"
     >
       {/* Scroll-revealed radiant light seam at section entry */}
       <motion.div 
@@ -77,21 +77,21 @@ export const Projects: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false, amount: 0.2 }}
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-          className="text-center mb-16"
+          className="text-center mb-10 sm:mb-16"
         >
           <div className="inline-flex items-center justify-center p-3 rounded-2xl bg-zinc-100 dark:bg-white/5 border border-zinc-300 dark:border-white/10 mb-4 text-zinc-900 dark:text-white shadow-sm">
-            <Briefcase className="w-8 h-8" />
+            <Briefcase className="w-7 h-7 sm:w-8 sm:h-8" />
           </div>
-          <h2 className="poppins-bold text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-zinc-900 dark:text-white mb-4">
+          <h2 className="poppins-bold text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-zinc-900 dark:text-white mb-3 sm:mb-4">
             PROJECTS
           </h2>
-          <p className="poppins-regular projects-text text-zinc-600 dark:text-slate-300 text-base sm:text-lg max-w-2xl mx-auto">
+          <p className="poppins-regular projects-text text-zinc-600 dark:text-slate-300 text-sm sm:text-base md:text-lg max-w-2xl mx-auto px-2">
             These are some of the professional experiences I have gained:
           </p>
         </motion.div>
 
         {/* Project Cards Grid with staggered scroll reveal */}
-        <div className="projects-container grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div className="projects-container grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 max-w-5xl mx-auto">
           {projectItems.map((project, index) => (
             <motion.div
               key={project.id}
@@ -100,10 +100,10 @@ export const Projects: React.FC = () => {
               viewport={{ once: false, amount: 0.15 }}
               transition={{ duration: 0.65, delay: index * 0.18, ease: [0.22, 1, 0.36, 1] }}
               whileHover={{ y: -6, transition: { duration: 0.25 } }}
-              className="project-card glass-card rounded-2xl overflow-hidden flex flex-col p-6 group hover:border-zinc-400 dark:hover:border-white/20"
+              className="project-card glass-card rounded-2xl overflow-hidden flex flex-col p-5 sm:p-7 group hover:border-zinc-400 dark:hover:border-white/20"
             >
               {/* Card Image Container */}
-              <div className="w-full h-52 rounded-xl overflow-hidden mb-6 bg-zinc-100 dark:bg-[#0c101a] flex items-center justify-center p-4 relative border border-zinc-200 dark:border-white/5 group-hover:border-zinc-300 dark:group-hover:border-white/15 transition-all">
+              <div className="w-full h-44 sm:h-52 rounded-xl overflow-hidden mb-5 sm:mb-6 bg-zinc-100 dark:bg-[#0c101a] flex items-center justify-center p-4 relative border border-zinc-200 dark:border-white/5 group-hover:border-zinc-300 dark:group-hover:border-white/15 transition-all">
                 <img
                   src={project.image}
                   alt={project.imageAlt}
@@ -118,7 +118,7 @@ export const Projects: React.FC = () => {
               {/* Card Content */}
               <div className="flex-1 flex flex-col justify-between">
                 <div>
-                  <h3 className="poppins-semibold text-xl font-semibold text-zinc-900 dark:text-white transition-colors mb-3">
+                  <h3 className="poppins-semibold text-lg sm:text-xl font-semibold text-zinc-900 dark:text-white transition-colors mb-2.5 sm:mb-3">
                     {project.title}
                   </h3>
                   <p className="poppins-regular text-zinc-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed">

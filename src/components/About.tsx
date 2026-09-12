@@ -17,7 +17,7 @@ export const About: React.FC = () => {
   return (
     <section 
       id="about" 
-      className="about py-24 px-4 sm:px-6 relative border-t border-zinc-200 dark:border-white/5 bg-zinc-50 dark:bg-[#080b11] overflow-hidden transition-colors duration-300"
+      className="about py-16 sm:py-24 px-4 sm:px-6 relative border-t border-zinc-200 dark:border-white/5 bg-zinc-50 dark:bg-[#080b11] overflow-hidden transition-colors duration-300"
     >
       {/* Scroll-revealed radiant light seam at section entry */}
       <motion.div 
@@ -35,15 +35,15 @@ export const About: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false, amount: 0.2 }}
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-          className="text-center mb-16"
+          className="text-center mb-10 sm:mb-16"
         >
           <div className="inline-flex items-center justify-center p-3 rounded-2xl bg-zinc-100 dark:bg-white/5 border border-zinc-300 dark:border-white/10 mb-4 text-zinc-900 dark:text-white shadow-sm">
-            <User className="w-8 h-8" />
+            <User className="w-7 h-7 sm:w-8 sm:h-8" />
           </div>
-          <h2 className="poppins-bold text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-zinc-900 dark:text-white mb-4">
+          <h2 className="poppins-bold text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-zinc-900 dark:text-white mb-3 sm:mb-4">
             ABOUT AADARSH
           </h2>
-          <p className="poppins-regular text-zinc-600 dark:text-slate-300 text-base sm:text-lg max-w-2xl mx-auto">
+          <p className="poppins-regular text-zinc-600 dark:text-slate-300 text-sm sm:text-base md:text-lg max-w-2xl mx-auto px-2">
             A journey of technology, business, exploration, and continuous learning.
           </p>
         </motion.div>
@@ -58,10 +58,10 @@ export const About: React.FC = () => {
             transition={{ duration: 0.7, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
             className="lg:col-span-4 flex flex-col gap-6"
           >
-            <div className="glass-card rounded-2xl p-6 flex flex-col items-center text-center relative overflow-hidden group">
+            <div className="glass-card rounded-2xl p-5 sm:p-6 flex flex-col items-center text-center relative overflow-hidden group">
               {/* Profile Image with subtle ring */}
               <div className="relative mb-5">
-                <div className="w-28 h-28 sm:w-32 sm:h-32 rounded-2xl overflow-hidden ring-2 ring-zinc-300 dark:ring-white/20 transition-all shadow-md">
+                <div className="w-24 h-24 sm:w-32 sm:h-32 rounded-2xl overflow-hidden ring-2 ring-zinc-300 dark:ring-white/20 transition-all shadow-md">
                   <img 
                     src="/images/aadarsh-profile.jpg" 
                     alt="Aadarsh Neupane" 
@@ -76,7 +76,7 @@ export const About: React.FC = () => {
                 </div>
               </div>
 
-              <h3 className="poppins-bold text-xl text-zinc-900 dark:text-white font-bold mb-1">
+              <h3 className="poppins-bold text-lg sm:text-xl text-zinc-900 dark:text-white font-bold mb-1">
                 Aadarsh Neupane
               </h3>
               <p className="text-xs font-semibold text-zinc-600 dark:text-zinc-300 tracking-wider uppercase mb-4">
@@ -87,14 +87,14 @@ export const About: React.FC = () => {
 
               {/* Core Interest Pills */}
               <div className="w-full mt-3 text-left">
-                <p className="text-xs font-semibold text-zinc-500 dark:text-slate-400 uppercase tracking-wider mb-3">
+                <p className="text-xs font-semibold text-zinc-500 dark:text-slate-400 uppercase tracking-wider mb-2.5">
                   Areas of Exploration
                 </p>
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-1.5 sm:gap-2">
                   {['Software', 'AI', 'Cybersecurity', 'Digital Marketing', 'Creative Work', 'Event Organizing'].map((area) => (
                     <span 
                       key={area}
-                      className="text-xs px-2.5 py-1 rounded-lg bg-zinc-100 dark:bg-white/5 text-zinc-800 dark:text-zinc-200 border border-zinc-200 dark:border-white/10"
+                      className="text-[11px] sm:text-xs px-2.5 py-1 rounded-lg bg-zinc-100 dark:bg-white/5 text-zinc-800 dark:text-zinc-200 border border-zinc-200 dark:border-white/10"
                     >
                       {area}
                     </span>
@@ -104,7 +104,7 @@ export const About: React.FC = () => {
             </div>
 
             {/* Certifications & Simulations Summary Badge */}
-            <div className="glass-card rounded-2xl p-6">
+            <div className="glass-card rounded-2xl p-5 sm:p-6">
               <div className="flex items-center gap-2 text-zinc-900 dark:text-white font-semibold text-sm mb-3">
                 <Award className="w-4 h-4" />
                 <span>Simulations & Certifications</span>
@@ -143,8 +143,8 @@ export const About: React.FC = () => {
             transition={{ duration: 0.7, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
             className="lg:col-span-8 flex flex-col gap-6"
           >
-            <div className="glass-card rounded-2xl p-8 sm:p-10 relative">
-              <div className="space-y-6 text-zinc-700 dark:text-slate-300 text-base sm:text-lg leading-relaxed poppins-regular">
+            <div className="glass-card rounded-2xl p-5 sm:p-8 md:p-10 relative">
+              <div className="space-y-5 sm:space-y-6 text-zinc-700 dark:text-slate-300 text-sm sm:text-base md:text-lg leading-relaxed poppins-regular">
                 {/* Paragraph 1: Intro */}
                 <p>
                   I’m <strong className="text-zinc-950 dark:text-white font-semibold">Aadarsh Neupane</strong>, a 19-year-old currently pursuing a Bachelor’s in Information Technology Engineering in Nepal. My journey so far has been a mix of technology, business, events, and learning through real experiences.
@@ -198,16 +198,16 @@ export const About: React.FC = () => {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: false, amount: 0.3 }}
                 transition={{ duration: 0.6, delay: 0.15 }}
-                className="mt-8 pt-8 border-t border-zinc-200 dark:border-white/10 relative"
+                className="mt-6 sm:mt-8 pt-6 sm:pt-8 border-t border-zinc-200 dark:border-white/10 relative"
               >
-                <div className="p-6 rounded-xl bg-zinc-100 dark:bg-white/[0.03] border border-zinc-300 dark:border-white/10 relative overflow-hidden group">
-                  <div className="flex items-start gap-4">
-                    <Quote className="w-8 h-8 text-zinc-400 dark:text-zinc-500 shrink-0 opacity-70 mt-1" />
+                <div className="p-4 sm:p-6 rounded-xl bg-zinc-100 dark:bg-white/[0.03] border border-zinc-300 dark:border-white/10 relative overflow-hidden group">
+                  <div className="flex items-start gap-3 sm:gap-4">
+                    <Quote className="w-6 h-6 sm:w-8 sm:h-8 text-zinc-400 dark:text-zinc-500 shrink-0 opacity-70 mt-1" />
                     <div>
-                      <p className="poppins-bold text-lg sm:text-xl text-zinc-900 dark:text-white font-bold leading-snug">
+                      <p className="poppins-bold text-base sm:text-lg md:text-xl text-zinc-900 dark:text-white font-bold leading-snug">
                         I’m not trying to have everything figured out yet. I’m here to learn, build, explore, and see how far I can take it.
                       </p>
-                      <span className="block mt-3 text-xs text-zinc-600 dark:text-zinc-400 font-medium tracking-wider uppercase">
+                      <span className="block mt-2.5 sm:mt-3 text-xs text-zinc-600 dark:text-zinc-400 font-medium tracking-wider uppercase">
                         — Aadarsh Neupane
                       </span>
                     </div>
