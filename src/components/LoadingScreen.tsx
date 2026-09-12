@@ -75,12 +75,12 @@ export const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete }) => {
               initial={{ scale: 0.7, opacity: 0, y: 15 }}
               animate={{ scale: 1, opacity: 1, y: 0 }}
               transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-              className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl overflow-hidden ring-1 ring-white/20 p-1 bg-white/5 backdrop-blur-md mb-6 sm:mb-8 shadow-2xl shadow-black/80 flex items-center justify-center"
+              className="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl overflow-hidden ring-1 ring-red-500/30 p-1.5 bg-red-950/20 backdrop-blur-md mb-6 sm:mb-8 shadow-2xl shadow-red-950/40 flex items-center justify-center relative"
             >
               <img
-                src="/images/aadarsh-logo.png"
-                alt="Aadarsh Neupane"
-                className="w-full h-full object-cover rounded-xl"
+                src="/images/aadarsh-monogram-red.jpg"
+                alt="Aadarsh"
+                className="w-full h-full object-contain rounded-xl"
               />
             </motion.div>
 
@@ -111,7 +111,7 @@ export const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete }) => {
               className="mt-3 flex items-center gap-2"
             >
               <span className="font-mono text-xs sm:text-sm uppercase tracking-[0.35em] text-zinc-400 font-medium">
-                NEUPANE · EXPLORER
+                EXPLORER
               </span>
             </motion.div>
 
