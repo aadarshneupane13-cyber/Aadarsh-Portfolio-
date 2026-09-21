@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { motion, useScroll, useSpring } from 'framer-motion';
-import { LoadingScreen } from './components/LoadingScreen';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { SocialLinks } from './components/SocialLinks';
@@ -12,7 +11,6 @@ import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
 
 export const App: React.FC = () => {
-  const [isLoading, setIsLoading] = useState(true);
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 100,
@@ -22,11 +20,6 @@ export const App: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-zinc-50 dark:bg-[#07090e] text-zinc-800 dark:text-slate-100 flex flex-col selection:bg-zinc-800 selection:text-white dark:selection:bg-white dark:selection:text-black font-['Poppins'] transition-colors duration-300">
-      {/* Motion Loading Screen with Animated AADARSH text */}
-      {isLoading && (
-        <LoadingScreen onComplete={() => setIsLoading(false)} />
-      )}
-
       {/* Smooth minimal scroll progress bar */}
       <motion.div
         className="fixed top-0 left-0 right-0 h-[2px] bg-zinc-900 dark:bg-white origin-left z-50 pointer-events-none opacity-80"
