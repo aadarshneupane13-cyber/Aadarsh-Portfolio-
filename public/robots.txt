@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://aadarshneupane.com/sitemap.xml
+Sitemap: https://aadarshneupane.com.np/sitemap.xml
